@@ -1,0 +1,11 @@
+{% extends "index_menu.html" %}
+
+
+
+{% block menu %}
+
+    {% for item_menu in menu %}
+        <a href="{{item_menu.get_absolute_url}}">{{ item_menu.name }}</a>
+    {% endfor %}
+
+{% endblock menu %}

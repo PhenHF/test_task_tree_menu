@@ -1,0 +1,25 @@
+{% load menu_tags %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% block menu %}
+
+        {% draw_menu "Главное меню" as draw_menu %}
+
+        {% for item_menu in draw_menu %}
+            <a href="{{item_menu.get_absolute_url}}">{{ item_menu.name }}</a>
+        {% endfor %}
+
+    
+    {% endblock menu %}
+
+</body>
+</html>
